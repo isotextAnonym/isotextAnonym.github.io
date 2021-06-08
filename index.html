@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>IsoTex</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="intro">
+            <h1> IsoTex: Creating Isotypes as Documents with a Declarative Markup Language </h1>
+            <p>
+                This paper contributes IsoTex, a new semi-declarative markup language for creating isotypes. Isotypes are an omnipresent form of visualization favoured by designers to communicate data to a diverse audience via series of pictorial representations or icons. IsoTex makes isotype creation akin to textual document preparation in LATEX. Coupled with an interactive editor, IsoTex enables designers to explore a large range of design alternatives via either live editing or direct manipulation. Users can experiment with different data units and layouts in the language, immediately reflected in the editor, or rapidly skim through alternative icons, adjusting their aspect ratio and spacing in the editor, immediately added to the syntax. The light-weight version history supports design experimentation while the textual specification facilitates design reuse. Feedback from users suggests that IsoTex could facilitate design explorations compared to graphical editors while offering a lower learning curve than programming.
+            </p>
+        </div>
+        <div class="img-container">
+            <div class="img-list-container" id="img-list">
+                <div class="img-card">
+                    <img id="img-list-1" onclick="changeImgDisplayed( 1 )" src="./isotex/Boat.png"/> 
+                </div>
+                <div class="img-card">
+                    <img id="img-list-2" onclick="changeImgDisplayed( 2 )" src="./isotex/Boat.png"/> 
+                </div>
+                <div class="img-card">
+                    <img id="img-list-3" onclick="changeImgDisplayed( 3 )" src="./isotex/Boat.png"/> 
+                </div>
+                <div class="img-card">
+                    <img id="img-list-4" onclick="changeImgDisplayed( 4 )" src="./isotex/Boat.png"/> 
+                </div>
+                <div class="img-card">
+                    <img id="img-list-5" onclick="changeImgDisplayed( 5 )" src="./isotex/Boat.png"/> 
+                </div>
+                <a class="prev" onclick="moveIndexList( -1 )">&#10094;</a>
+                <a class="next" onclick="moveIndexList( 1 )">&#10095;</a>
+            </div>
+            <div class="img-display">
+                <img id="img-displayed" src="./isotex/Boat.png"/> 
+                <img id="img-displayed-code" src="./isotex/BoatCode.png"/>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    init();
+</script>
+
+</html>

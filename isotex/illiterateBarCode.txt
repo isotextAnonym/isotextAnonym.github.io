@@ -1,0 +1,31 @@
+\doc[orientation=portrait,background=books.jpg]  {
+
+
+\font[weight=10, clip=0.5, word = 5,  wspace=0px]{
+	\character[alias=I, color=#6892E5, width=40px, height=50px, direction=lefttoright] {blue.png}   
+	\character[alias=L, color=#E61616, width=40px, height=50px, direction=righttoleft]  {blue.png}
+}
+
+\font[color=#000000, word=0]{
+	\character[alias = title, height=11px]{ Arial Black.ttf}
+	\character[alias = caption, height=9px]{ Arial Black.ttf}
+	\character[alias = legend, height=9px]{ Arial.ttf}
+}
+
+\character[alias = |, width = 4px,  color=#000000, height=max]{|}
+
+\sentence[characters=caption I | L, align= bottom right | left, interline = 30px] {}
+
+\sentence[characters= title, align = topleft, interline = 30px]
+{Growth of Literacy Among Members of USSR Industrial Unions}
+
+\paragraph[width= 1 sentence, vspace=20px, hspace=50,  color=#90FFFFFF]  
+{
+	\sentence[ interline = 0px]{1918   ,35, 1, 65}
+	\sentence[characters= caption  caption | caption  , align=bottom right | left, interline = 0px]{,illiterate, , literate} 
+	\sentence[interline = 20px]{1929,10, 1, 90}
+	\sentence[interline = 10px]{1931, 5, 1, 95}
+}
+\sentence[characters= legend, align = left] {Each figure represents 10 %}
+
+}

@@ -1,0 +1,50 @@
+
+
+\doc[orientation=portrait,background=letter.jpg]  {
+\font[weight=100000, clip=1, word = 10,  wspace=00px]{
+	\character[alias=IL, color=#D40000, height=15px, direction=lefttoright] {blue.png}   
+	\character[alias=JL, color=#23327E, width=15px, height=15px, direction=lefttoright]  {blue.png}
+	\character[alias=QL, color=#D40000, width=15px, height=15px, direction=lefttoright]  {blue.png}
+	\character[alias=LL, color=#000000, width=15px, height=15px, direction=lefttoright]  {blue.png}
+	\character[alias=IR, color=#D40000, width=15px, height=15px, direction=lefttoright] {blue.png} 
+	\character[color=#000000,alias=KL,  width=15px, height=15px, direction=lefttoright]  {Planche perso 2-71.png}  
+	\character[alias=JR, color=#23327E, width=15px, height=15px, direction=lefttoright]  {blue.png}
+	\character[color=#000000,alias=KR,  width=15px, height=15px, direction=lefttoright]  {blue.png}
+	\character[alias=LR, color=#000000, width=15px, height=15px, direction=lefttoright]  {blue.png}
+	\character[alias=QR, color=#D40000, width=15px, height=15px, direction=lefttoright]  {blue.png}
+	\character[alias=V, color=#7CA06C, width=15px, height=15px, direction=lefttoright]  {blue.png}
+}
+\font[color=#000000, word=0]{
+	\character[alias = title, height=11px]{ Arial Black.ttf}
+	\character[alias = subtitle, height=10px]{ Arial Black.ttf}
+	\character[alias = caption, height=9px]{ Arial.ttf}
+}
+\character[alias = |, width = 4px,  color=#000000, height=max]{|}
+\sentence[characters= title, align = topleft, interline = 30px]
+{Le sei categorie e i gruppi d'età}
+	\sentence[characters= subtitle | subtitle, align = topleft | topright, interline = 0px]{65 anni ed oltre, 1, 60 anni el oltre}
+\sentence[characters= subtitle | subtitle, align = topleft | topright]{Frad i 15 ed 65 anni, 1, Frad i 15 ed 60 anni}
+\sentence[characters= subtitle | subtitle, align = topleft | topright, interline = 30px]{Inferiori a 15 anni, 1, Inferiori a 15 anni}
+\sentence[characters=title V QL LL JL IL | IR JR LR KR QR V title , align=left  right  right right right right | left left left left left left right ] {}
+\paragraph[width= 1 sentence, vspace = 20px, color = #90FFFFFF, hspace = 50px]  
+{
+	\sentence[]{1,0,0,0,400000,0,1,0,600000,0,0,0,0,1}
+	\sentence[]{2,0,0,0,300000,100000,1,0,600000,0,0,0,0,2}
+	\sentence[]{3,0,0,0,300000,300000,1,100000,700000,0,0,0,0,3}
+	\sentence[]{4,0,100000,0,200000,600000,1,100000,900000,0,0,0,0,4}
+	\sentence[]{5,0,100000,200000,0,800000,1,200000,0,100000,800000,100000,0,5}
+	\sentence[]{6,0,0,200000,0,1000000,1,200000,0,100000,1000000,100000,0,6}
+	\sentence[]{7,0,0,300000,0,1000000,1,300000,0,0,1100000,100000,0,7}
+	\sentence[]{8,0, 100000,200000,0,1100000,1,300000,0,100000,1100000,100000,0,8}
+	\sentence[]{9,0,0,200000,0,1200000,1,400000,0,0,1200000,100000,0,9}
+	\sentence[]{10,0,0,200000,0,1400000,1,500000,0,100000,1100000,100000,0,10}
+	\sentence[]{11,0,100000,100000,0,1600000,1,800000,0,0,1000000,100000,0,11}
+	\sentence[]{12,0,100000,100000,0,1700000,1,1400000,0,0,500000,100000,0,12}
+	\sentence[]{13,0,300000,0,0,1600000,1,1400000,0,0,0,400000,0,13}
+	\sentence[]{14,1800000,0,0,0,0,1,0,0,0,0,0,1800000,14}
+	\sentence[]{15,1900000,0,0,0,0,1,0,0,0,0,0,1900000,15}
+	\sentence[]{16,1700000,0,0,0,0,1,0,0,0,0,0,1700000,16}
+}
+\sentence[characters= caption, align = left] {ogni simbolo rappresenta 100 000 persone}
+}
+
