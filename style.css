@@ -10,10 +10,14 @@ p{
     text-align: justify;
 }
 
-video{
+.video{
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
-
 .content{
     margin: auto;
     width: 900px;
