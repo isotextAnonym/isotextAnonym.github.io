@@ -10,6 +10,10 @@ p{
     text-align: justify;
 }
 
+video{
+    width: 100%;
+}
+
 .content{
     margin: auto;
     width: 900px;
@@ -35,6 +39,7 @@ p{
 }
 
 .img-display img{
+    cursor: pointer;
     max-height: 100%;
     max-width: 45%;
     border-radius: 3px;
@@ -108,4 +113,41 @@ p{
 .prev{
     left: 0px;
     border-radius: 0 3px 3px 0;
+}
+
+#modal{
+    cursor: pointer;
+    position: fixed;
+    height: calc( 100% - 20px );
+    width: 100%;
+    z-index: 1;
+    padding: 10px;
+    left: 0;
+    top: 0;
+    background-color: rgba(7, 7, 7, 0.95);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal img{
+    max-height: calc(100%);
+    max-width: 45%;
+}
+
+#img-modal {
+    margin-right: 20px;
+}
+
+#modal-close {
+    position: fixed;
+    z-index: 2;
+    font-size: 40px;
+    width : 40px;
+    height: 40px;
+    font-weight: bolder;
+    color: #fff;
+    top: 10px;
+    right: 10px;
 }

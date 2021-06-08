@@ -22,6 +22,8 @@ indexList = 0;
 function init() {
 
     document.getElementById("img-list").addEventListener("wheel", scrollList);
+    document.getElementById( "modal" ).style.display = "none";
+    document.getElementById("modal").addEventListener("wheel", scrollModal);
 
     displayImg();
     displayImgList();
@@ -76,6 +78,50 @@ function scrollList( event ) {
         moveIndexList( 1 );
 
     }
+
+}
+
+function openModal() {
+
+    document.getElementById( "modal" ).style.display = "flex";
+
+    imgsrc = imgList[ indexImg ];
+    imgCode = imgsrc.split('.')[ 1 ];
+    imgCode = '.' + imgCode + 'Code.png';
+
+    document.getElementById( "img-modal" ).setAttribute("src", imgsrc );
+    document.getElementById( "img-code-modal" ).setAttribute("src", imgCode );
+
+}
+
+function closeModal() {
+
+    document.getElementById( "modal" ).style.display = "none";
+
+}
+
+function scrollModal( event ) {
+
+    event.preventDefault();
+
+    if ( event.deltaY > 0 ) {
+
+        indexImg = parseInt( ( indexImg + 1 ) ).mod( imgList.length ); 
+
+    } else {
+
+        indexImg = parseInt( ( indexImg - 1 ) ).mod( imgList.length ); 
+
+    }
+    
+    displayImg();
+    
+    imgsrc = imgList[ indexImg ];
+    imgCode = imgsrc.split('.')[ 1 ];
+    imgCode = '.' + imgCode + 'Code.png';
+
+    document.getElementById( "img-modal" ).setAttribute("src", imgsrc );
+    document.getElementById( "img-code-modal" ).setAttribute("src", imgCode );
 
 }
 
