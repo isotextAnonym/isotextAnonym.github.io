@@ -1,91 +1,84 @@
-imgList = [
-    "./isotex/BigPyramid.png",
-    "./isotex/BigPyramidBar.png",
-    "./isotex/Boat.png",
-    "./isotex/book.png",
-    "./isotex/Cars.png",
-    "./isotex/Cars2.png",
-    "./isotex/ComplexSplit.png",
-    "./isotex/Earth.png",
-    "./isotex/EuroCent.png",
-    "./isotex/FarParis.png",
-    "./isotex/illeterateBar.png",
-    "./isotex/Pyramide.png",
-    "./isotex/Vaccine.png",
-    "./isotex/Vaccine1.png",
-    "./isotex/Wine.png"
-];
+// imgList = [
+//     "./isotex/BigPyramid.png",
+//     "./isotex/BigPyramidBar.png",
+//     "./isotex/Boat.png",
+//     "./isotex/book.png",
+//     "./isotex/Cars.png",
+//     "./isotex/Cars2.png",
+//     "./isotex/ComplexSplit.png",
+//     "./isotex/Earth.png",
+//     "./isotex/EuroCent.png",
+//     "./isotex/FarParis.png",
+//     "./isotex/illeterateBar.png",
+//     "./isotex/Pyramide.png",
+//     "./isotex/Vaccine.png",
+//     "./isotex/Vaccine1.png",
+//     "./isotex/Wine.png"
+// ];
 
-indexImg = 0;
-indexList = 0;
+imgList= [
+    {
+        title: 'Otto Neurath',
+        imgs: [
+            "./isotex/BigPyramid.png",
+            "./isotex/Cars.png",
+            "./isotex/Cars2.png",
+            "./isotex/ComplexSplit.png",
+            "./isotex/Pyramide.png",
+            "./isotex/WorkerInBerlin.png"
+        ]
+    },
+    {
+        title: 'Bar',
+        imgs: [
+            "./isotex/BigPyramidBar.png",
+            "./isotex/illeterateBar.png"
+        ]
+    },
+    {
+        title: 'Tally',
+        imgs: [
+            "./isotex/EuroCent.png"
+        ]
+    },
+    {
+        title: 'Space Filling',
+        imgs: [
+            "./isotex/Earth.png"
+        ]
+    },
+    {
+        title: 'Miscellaneous',
+        imgs: [
+            "./isotex/Boat.png",
+            "./isotex/book.png",
+            "./isotex/FarParis.png",
+            "./isotex/Vaccine.png",
+            "./isotex/Vaccine1.png",
+            "./isotex/Wine.png"
+        ]
+    }
+]
+
+indexListModal = 0;
+indexSrcModal = 0;
 
 function init() {
 
-    document.getElementById("img-list").addEventListener("wheel", scrollList);
+    createContent();
+
     document.getElementById( "modal" ).style.display = "none";
     document.getElementById("modal").addEventListener("wheel", scrollModal);
 
-    displayImg();
-    displayImgList();
-
 }
 
-function changeImgDisplayed( n ) {
+function openModal( imgsrc, iList, iSrc ) {
 
-    indexImg = parseInt( ( indexList + n - 3 ) ).mod( imgList.length ); 
-    displayImg();
-
-}
-
-function moveIndexList( i ) {
-
-    indexList = indexList + i;
-    displayImgList();
-
-}
-
-function displayImg() {
-
-    imgsrc = imgList[ indexImg ];
-    imgCode = imgsrc.split('.')[ 1 ];
-    imgCode = '.' + imgCode + 'Code.png';
-
-    document.getElementById( "img-displayed" ).setAttribute("src", imgsrc );
-    document.getElementById( "img-displayed-code" ).setAttribute("src", imgCode  );
-
-}
-
-function displayImgList() {
-
-    document.getElementById( "img-list-1" ).setAttribute("src", imgList[ parseInt( ( indexList - 2 ) ).mod( imgList.length ) ] );
-    document.getElementById( "img-list-2" ).setAttribute("src", imgList[ parseInt( ( indexList - 1 ) ).mod( imgList.length ) ] );
-    document.getElementById( "img-list-3" ).setAttribute("src", imgList[ parseInt( ( indexList ) ).mod( imgList.length ) ] );
-    document.getElementById( "img-list-4" ).setAttribute("src", imgList[ parseInt( ( indexList + 1 ) ).mod( imgList.length ) ] );
-    document.getElementById( "img-list-5" ).setAttribute("src", imgList[ parseInt( ( indexList + 2 ) ).mod( imgList.length ) ] );
-
-}
-
-function scrollList( event ) {
-
-    event.preventDefault();
-
-    if ( event.deltaY > 0 ) {
-
-        moveIndexList( -1 );
-
-    } else {
-
-        moveIndexList( 1 );
-
-    }
-
-}
-
-function openModal() {
+    indexListModal = parseInt( iList );
+    indexSrcModal = parseInt( iSrc );
 
     document.getElementById( "modal" ).style.display = "flex";
 
-    imgsrc = imgList[ indexImg ];
     imgCode = imgsrc.split('.')[ 1 ];
     imgCode = '.' + imgCode + 'Code.png';
 
@@ -106,22 +99,65 @@ function scrollModal( event ) {
 
     if ( event.deltaY > 0 ) {
 
-        indexImg = parseInt( ( indexImg + 1 ) ).mod( imgList.length ); 
+        indexSrcModal = parseInt( ( indexSrcModal + 1 ) ).mod( imgList[ indexListModal ].imgs.length ); 
 
     } else {
 
-        indexImg = parseInt( ( indexImg - 1 ) ).mod( imgList.length ); 
+        indexSrcModal = parseInt( ( indexSrcModal - 1 ) ).mod( imgList[ indexListModal ].imgs.length ); 
 
     }
     
-    displayImg();
-    
-    imgsrc = imgList[ indexImg ];
+    imgsrc = imgList[ indexListModal ].imgs[ indexSrcModal ];
     imgCode = imgsrc.split('.')[ 1 ];
     imgCode = '.' + imgCode + 'Code.png';
 
     document.getElementById( "img-modal" ).setAttribute("src", imgsrc );
     document.getElementById( "img-code-modal" ).setAttribute("src", imgCode );
+
+}
+
+function createContent() {
+
+    root = document.getElementById( "img-container" );
+
+    iList = 0;
+
+    for ( const myList of imgList ) {
+
+        wrapperDiv = document.createElement('div');
+        wrapperDiv.setAttribute("class", "img-wrapper");
+        root.append( wrapperDiv );
+
+        titleDiv = document.createElement('div');
+        titleDiv.setAttribute("class", "img-title");
+        titleDiv.innerHTML = myList.title
+        wrapperDiv.append( titleDiv );
+
+        listContainerDiv = document.createElement('div');
+        listContainerDiv.setAttribute("class", "img-list-container");
+        wrapperDiv.append( listContainerDiv );
+        
+        iSrc = 0;
+
+        for ( const imgsrc of myList.imgs ) {
+
+            cardDiv = document.createElement('div');
+            cardDiv.setAttribute("class", "img-card");
+            listContainerDiv.append( cardDiv );
+            cardDiv.style.maxWidth = 'calc(100% / ' + myList.imgs.length + ' - 30px)';
+
+            imgDiv = document.createElement('img');
+            imgDiv.setAttribute("onclick", "openModal( '" + imgsrc + "'," + iList + "," + iSrc + " )" );
+            imgDiv.setAttribute("src", imgsrc );
+            cardDiv.append( imgDiv );
+
+            iSrc += 1;
+
+        }
+
+        iList += 1;
+
+    }
 
 }
 

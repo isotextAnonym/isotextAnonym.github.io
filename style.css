@@ -25,32 +25,21 @@ p{
     background: rgb(255, 255, 255);
 }
 
-.img-container{
+#img-container{
     background: #333;
     border-radius: 5px;
+    padding: 10px 5px;
 }
 
-.img-display{
-
-    width : calc( 100% - 20px);
-    height: 500px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
+#img-container div:not(:first-child) {
+    margin-top: 10px;
 }
 
-.img-display img{
-    cursor: pointer;
-    max-height: 100%;
-    max-width: 45%;
-    border-radius: 3px;
-}
-
-#img-displayed{
-    margin-right: 10px;
+.img-title{
+    width: 100%;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
 }
 
 .img-list-container{
@@ -62,8 +51,10 @@ p{
     height: 150px;
 }
 
+/* .img-list-container div:not(:first-child) {
+} */
+
 .img-card {
-    width: calc(100% / 5 - 30px);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -138,10 +129,12 @@ p{
 #modal img{
     max-height: calc(100%);
     max-width: 45%;
+    user-select: none;
 }
 
 #img-modal {
     margin-right: 20px;
+    user-select: none;
 }
 
 #modal-close {

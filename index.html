@@ -20,30 +20,7 @@
             </iframe>
         </div>
         
-        <div class="img-container">
-            <div class="img-list-container" id="img-list">
-                <div class="img-card">
-                    <img id="img-list-1" onclick="changeImgDisplayed( 1 )" src="./isotex/Boat.png"/> 
-                </div>
-                <div class="img-card">
-                    <img id="img-list-2" onclick="changeImgDisplayed( 2 )" src="./isotex/Boat.png"/> 
-                </div>
-                <div class="img-card">
-                    <img id="img-list-3" onclick="changeImgDisplayed( 3 )" src="./isotex/Boat.png"/> 
-                </div>
-                <div class="img-card">
-                    <img id="img-list-4" onclick="changeImgDisplayed( 4 )" src="./isotex/Boat.png"/> 
-                </div>
-                <div class="img-card">
-                    <img id="img-list-5" onclick="changeImgDisplayed( 5 )" src="./isotex/Boat.png"/> 
-                </div>
-                <a class="prev" onclick="moveIndexList( -1 )">&#10094;</a>
-                <a class="next" onclick="moveIndexList( 1 )">&#10095;</a>
-            </div>
-            <div class="img-display">
-                <img id="img-displayed" onclick="openModal()" src="./isotex/Boat.png"/> 
-                <img id="img-displayed-code" onclick="openModal()" src="./isotex/BoatCode.png"/>
-            </div>
+        <div id="img-container">
         </div>
     </div>
     <div id="modal" onclick="closeModal()">
