@@ -31,7 +31,11 @@ p{
     padding: 10px 5px;
 }
 
-#img-container div:not(:first-child) {
+.img-wrapper#first {
+    margin-top: 0;
+}
+
+.img-wrapper {
     margin-top: 10px;
 }
 
@@ -48,7 +52,8 @@ p{
     justify-content: space-around;
     position: relative;
     padding: 10px 20px;
-    height: 150px;
+    /* height: 150px; */
+    flex-wrap: wrap;
 }
 
 /* .img-list-container div:not(:first-child) {
@@ -64,8 +69,8 @@ p{
 .img-card img{
     cursor: pointer;
     max-width: 100%;
-    max-height: 100%;
-    margin: auto;
+    max-height: 130px;
+    margin: 5px 10px;
     border-radius: 3px;
     box-shadow: 6px 3px 5px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.2s;

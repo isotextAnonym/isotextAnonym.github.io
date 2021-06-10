@@ -126,6 +126,7 @@ function createContent() {
 
         wrapperDiv = document.createElement('div');
         wrapperDiv.setAttribute("class", "img-wrapper");
+        if (iList === 0 ) wrapperDiv.setAttribute("id", "first");
         root.append( wrapperDiv );
 
         titleDiv = document.createElement('div');
@@ -144,7 +145,8 @@ function createContent() {
             cardDiv = document.createElement('div');
             cardDiv.setAttribute("class", "img-card");
             listContainerDiv.append( cardDiv );
-            cardDiv.style.maxWidth = 'calc(100% / ' + myList.imgs.length + ' - 30px)';
+            // cardDiv.style.maxWidth = 'calc(100% / ' + myList.imgs.length + ' - 30px)';
+            // cardDiv.style.maxWidth = 'calc(100% / ' + myList.imgs.length + ' - 30px)';
 
             imgDiv = document.createElement('img');
             imgDiv.setAttribute("onclick", "openModal( '" + imgsrc + "'," + iList + "," + iSrc + " )" );
