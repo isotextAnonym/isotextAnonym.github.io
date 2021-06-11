@@ -47,7 +47,9 @@ imgList= [
     {
         title: 'Space Filling',
         imgs: [
-            "./isotex/Earth.png"
+            "./isotex/Earth.png",
+            "./isotex/country.png",
+            "./isotex/shooting.png"
         ]
     },
     {
