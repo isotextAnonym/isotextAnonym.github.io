@@ -25,8 +25,9 @@ imgList= [
             "./isotex/Car2.png",
             "./isotex/ComplexSplit.png",
             "./isotex/Pyramide.png",
-            "./isotex/WorkerInBerlin.png"
-        ]
+            "./isotex/WorkerInBerlin.png",
+            "./isotex/book.png"
+	]
     },
     {
         title: 'Bar',
@@ -56,8 +57,6 @@ imgList= [
         title: 'Miscellaneous',
         imgs: [
             "./isotex/Boat.png",
-            "./isotex/book.png",
-            "./isotex/FarParis.png",
             "./isotex/Vaccine.png",
             "./isotex/Vaccine1.png",
             "./isotex/Wine.png"
