@@ -22,7 +22,7 @@ imgList= [
         imgs: [
             "./isotex/BigPyramid.png",
             "./isotex/Cars.png",
-            "./isotex/Cars.png",
+            "./isotex/Car2.png",
             "./isotex/ComplexSplit.png",
             "./isotex/Pyramide.png",
             "./isotex/WorkerInBerlin.png"
