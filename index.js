@@ -32,7 +32,9 @@ imgList= [
         title: 'Bar',
         imgs: [
             "./isotex/BigPyramidBar.png",
-            "./isotex/illeterateBar.png"
+            "./isotex/illeterateBar.png",
+	    "./isotex/PyramideBar.png",
+	    "./isotex/Car2Bar.png"
         ]
     },
     {
