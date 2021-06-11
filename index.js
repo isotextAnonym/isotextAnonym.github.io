@@ -40,7 +40,8 @@ imgList= [
     {
         title: 'Tally',
         imgs: [
-            "./isotex/EuroCent.png"
+            "./isotex/EuroCent.png",
+            "./isotex/Game.png"
         ]
     },
     {
